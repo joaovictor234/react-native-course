@@ -16,7 +16,7 @@ function GoalInput({ onAddGoal, onCancel, visible }) {
   return (
     <Modal visible={visible} animationType="slide">
       <View style={styles.inputContainer}>
-        <Image 
+        <Image
           style={styles.image}
           source={require('../assets/images/target-icon.png')} />
         <TextInput
@@ -27,11 +27,15 @@ function GoalInput({ onAddGoal, onCancel, visible }) {
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
             <Button
-              title='Add Goal'
-              onPress={addGoalHandler} />
+              title="Cancel"
+              color="#f31283"
+              onPress={onCancel} />
           </View>
           <View style={styles.button}>
-            <Button title="Cancel" onPress={onCancel} />
+            <Button
+              title='Add Goal'
+              color="#b180f0"
+              onPress={addGoalHandler} />
           </View>
         </View>
       </View>
@@ -54,12 +58,15 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     margin: 20
-  },  
+  },
   textInput: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#e4d0ff',
+    backgroundColor: "#e4d0ff",
+    color: "#120438",
+    borderRadius: 6,
     width: '100%',
-    padding: 8
+    padding: 16
   },
   buttonContainer: {
     marginTop: 16,
